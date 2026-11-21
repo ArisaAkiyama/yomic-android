@@ -30,27 +30,20 @@ jobs:
         with:
           gradle-version: '8.10.2'
 
-      - name: Run Unit Tests & Build Debug + Release APKs
-        run: gradle :app:testGithubDebugUnitTest :app:assembleGithubDebug :app:assembleGithubRelease
+      - name: Run Unit Tests & Build Release APK
+        run: gradle :app:testGithubDebugUnitTest :app:assembleGithubRelease
 
-      - name: Upload Debug APK
+      - name: Upload Release APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Yomic-Mobile-debug-apk
-          path: app/build/outputs/apk/github/debug/app-github-debug.apk
-
-      - name: Upload Lightweight Release APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: Yomic-Mobile-release-apk
+          name: Yomic-Mobile-apk
           path: app/build/outputs/apk/github/release/app-github-release.apk
 
-      - name: Prepare Release APK Assets
+      - name: Prepare Release APK Asset
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
           TAG_NAME="${GITHUB_REF#refs/tags/}"
           cp app/build/outputs/apk/github/release/app-github-release.apk "Yomic_Mobile_${TAG_NAME}.apk"
-          cp app/build/outputs/apk/github/debug/app-github-debug.apk "Yomic_Mobile_${TAG_NAME}-debug.apk"
 
       - name: Publish GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -59,4 +52,3 @@ jobs:
           files: |
             Yomic_Mobile_*.apk
           generate_release_notes: false
-

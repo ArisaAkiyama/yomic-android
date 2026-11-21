@@ -142,9 +142,7 @@
 
 ## 📦 Installation
 
-1. Download **`Yomic_Mobile_v1.0.0.apk`** from [**GitHub Releases**](https://github.com/ArisaAkiyama/yomic-android/releases/latest) (or grab the latest CI build from [**GitHub Actions**](https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml)):
-   - **`Yomic_Mobile_v1.0.0.apk`** (Recommended — R8 minified release build with official extension catalog)
-   - **`Yomic_Mobile_v1.0.0-debug.apk`** (Debug build — can be installed side-by-side as `id.yomic.mobile.debug`)
+1. Download **`Yomic_Mobile_v1.0.0.apk`** from [**GitHub Releases**](https://github.com/ArisaAkiyama/yomic-android/releases/latest).
 2. Open the downloaded `.apk` file on your Android device (Android 7.0 / API 24 or newer) and install.
 
 ---
