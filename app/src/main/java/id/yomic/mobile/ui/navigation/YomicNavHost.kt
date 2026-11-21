@@ -533,7 +533,7 @@ fun YomicBottomNavigationBar(
     val s = yomicStrings
     val bottomTabs = listOf(
         BottomNavTab(YomicRoutes.LIBRARY, s.navLibrary, YomicIcons.Library, YomicIcons.LibraryFilled),
-        BottomNavTab(YomicRoutes.UPDATES, s.navUpdates, YomicIcons.NewReleases, badgeCount = newUpdatesCount),
+        BottomNavTab(YomicRoutes.UPDATES, s.navUpdates, YomicIcons.Updates, badgeCount = newUpdatesCount),
         BottomNavTab(YomicRoutes.BROWSE, s.navBrowse, YomicIcons.Browse),
         BottomNavTab(YomicRoutes.HISTORY, s.navHistory, YomicIcons.History),
         BottomNavTab(YomicRoutes.MORE, s.navMore, YomicIcons.More)

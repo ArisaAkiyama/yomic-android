@@ -98,7 +98,7 @@ class AppUpdateService(
     }
 
     companion object {
-        const val GITHUB_LATEST_RELEASE_URL = "https://api.github.com/repos/ArisaAkiyama/yomic/releases/latest"
+        const val GITHUB_LATEST_RELEASE_URL = "https://api.github.com/repos/ArisaAkiyama/yomic-android/releases/latest"
 
         /**
          * Compares two SemVer strings (e.g. `v2.10.0` vs `2.2.1` -> > 0).

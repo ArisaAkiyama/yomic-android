@@ -3,9 +3,13 @@ name: Yomic Mobile Android APK
 on:
   push:
     branches: [ main, master ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-apk:
@@ -40,3 +44,19 @@ jobs:
         with:
           name: Yomic-Mobile-release-apk
           path: app/build/outputs/apk/github/release/app-github-release.apk
+
+      - name: Prepare Release APK Assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
+          cp app/build/outputs/apk/github/release/app-github-release.apk "Yomic_Mobile_${TAG_NAME}.apk"
+          cp app/build/outputs/apk/github/debug/app-github-debug.apk "Yomic_Mobile_${TAG_NAME}-debug.apk"
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            Yomic_Mobile_*.apk
+          generate_release_notes: true
+

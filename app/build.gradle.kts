@@ -14,8 +14,8 @@ android {
         applicationId = "id.yomic.mobile"
         minSdk = 24
         targetSdk = 35
-        versionCode = 210
-        versionName = "2.1.0-mobile"
+        versionCode = 100
+        versionName = "1.0.0"
 
         vectorDrawables {
             useSupportLibrary = false

@@ -15,6 +15,8 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF.svg?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose%20%2B%20Material%203-4285F4.svg?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/compose)
 [![Extensions](https://img.shields.io/badge/Extensions-102%2B%20Sources-22C55E.svg?style=flat-square)](https://github.com/ArisaAkiyama/extension-yomic)
+[![Latest Release](https://img.shields.io/github/v/release/ArisaAkiyama/yomic-android?style=flat-square&color=0066FF&label=Latest)](https://github.com/ArisaAkiyama/yomic-android/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/ArisaAkiyama/yomic-android/total?style=flat-square&color=22C55E&label=Downloads)](https://github.com/ArisaAkiyama/yomic-android/releases)
 [![Build APK](https://img.shields.io/github/actions/workflow/status/ArisaAkiyama/yomic-android/android-mobile-build.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white&label=CI%20Build)](https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml)
 [![Desktop Companion](https://img.shields.io/badge/Desktop-Yomic%20v2%20(Windows)-0078D4.svg?style=flat-square&logo=windows)](https://github.com/ArisaAkiyama/yomic)
 
@@ -31,8 +33,8 @@
   <tr>
     <td align="center" width="240">
       <b>📥 Download Android APK</b><br/><br/>
-      <a href="https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml">
-        <img src="https://img.shields.io/badge/GitHub_Actions-Download_APK-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Download Yomic Mobile APK"/>
+      <a href="https://github.com/ArisaAkiyama/yomic-android/releases/latest">
+        <img src="https://img.shields.io/badge/Download-Yomic_Mobile_v1.0.0.apk-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Download Yomic Mobile APK"/>
       </a>
     </td>
     <td align="center" width="240">
@@ -140,11 +142,10 @@
 
 ## 📦 Installation
 
-1. Go to the [**GitHub Actions — Yomic Mobile Android APK**](https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml) page (or [**Releases**](https://github.com/ArisaAkiyama/yomic-android/releases)).
-2. Select the latest successful workflow run and download:
-   - **`Yomic-Mobile-release-apk`** (Recommended — R8 minified, ultra-lightweight)
-   - **`Yomic-Mobile-debug-apk`** (For debugging and side-by-side testing as `id.yomic.mobile.debug`)
-3. Extract the downloaded `.zip` artifact and install the `.apk` file on your Android device (Android 7.0 / API 24 or newer).
+1. Download **`Yomic_Mobile_v1.0.0.apk`** from [**GitHub Releases**](https://github.com/ArisaAkiyama/yomic-android/releases/latest) (or grab the latest CI build from [**GitHub Actions**](https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml)):
+   - **`Yomic_Mobile_v1.0.0.apk`** (Recommended — R8 minified release build with official extension catalog)
+   - **`Yomic_Mobile_v1.0.0-debug.apk`** (Debug build — can be installed side-by-side as `id.yomic.mobile.debug`)
+2. Open the downloaded `.apk` file on your Android device (Android 7.0 / API 24 or newer) and install.
 
 ---
 

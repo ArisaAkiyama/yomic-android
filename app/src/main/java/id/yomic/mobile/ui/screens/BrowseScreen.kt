@@ -436,53 +436,14 @@ fun BrowseScreen(
                     }
                 )
             } else {
-                val pinnedSources = visibleSources.filter { it.id in state.pinnedSourceIds }
-                val unpinnedSources = visibleSources.filter { it.id !in state.pinnedSourceIds }
-
                 LazyColumn(
                     contentPadding = PaddingValues(bottom = 16.dp),
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    if (pinnedSources.isNotEmpty()) {
-                        item(key = "src_hdr_pinned") {
-                            Text(
-                                text = if (s.isEn) "Pinned" else "Disematkan",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = tokens.inkSecondary,
-                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-                            )
-                        }
-                        items(pinnedSources, key = { "pin_${it.id}" }) { src ->
-                            BrowseSourceRow(
-                                src = src,
-                                isPinned = true,
-                                onOpenCatalog = { onOpenSourceCatalog(src.id) },
-                                onTogglePin = { onTogglePinSource(src.id) },
-                                onOpenBrowser = { openSourceInBrowser(src) }
-                            )
-                        }
-                        if (unpinnedSources.isNotEmpty()) {
-                            item(key = "src_hdr_all") {
-                                HorizontalDivider(
-                                    color = tokens.borderSubtle,
-                                    thickness = 0.8.dp,
-                                    modifier = Modifier.padding(vertical = 6.dp)
-                                )
-                                Text(
-                                    text = if (s.isEn) "All Sources" else "Semua Sumber",
-                                    style = MaterialTheme.typography.labelLarge,
-                                    color = tokens.inkSecondary,
-                                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
-                                )
-                            }
-                        }
-                    }
-                    items(unpinnedSources, key = { it.id }) { src ->
+                    items(visibleSources, key = { it.id }) { src ->
                         BrowseSourceRow(
                             src = src,
-                            isPinned = false,
                             onOpenCatalog = { onOpenSourceCatalog(src.id) },
-                            onTogglePin = { onTogglePinSource(src.id) },
                             onOpenBrowser = { openSourceInBrowser(src) }
                         )
                     }
@@ -575,9 +536,7 @@ fun BrowseScreen(
 @Composable
 private fun BrowseSourceRow(
     src: ExtensionItem,
-    isPinned: Boolean,
     onOpenCatalog: () -> Unit,
-    onTogglePin: () -> Unit,
     onOpenBrowser: () -> Unit
 ) {
     val tokens = YomicThemeTokens.colors
@@ -607,17 +566,6 @@ private fun BrowseSourceRow(
             )
         }
         ServerStatusIndicator(status = src.status)
-        IconButton(
-            onClick = onTogglePin,
-            modifier = Modifier.size(34.dp)
-        ) {
-            Icon(
-                imageVector = if (isPinned) YomicIcons.BookmarkFilled else YomicIcons.Bookmark,
-                contentDescription = if (isPinned) "Unpin" else "Pin",
-                tint = if (isPinned) tokens.inkPrimary else tokens.inkMuted,
-                modifier = Modifier.size(17.dp)
-            )
-        }
         IconButton(
             onClick = onOpenBrowser,
             modifier = Modifier.size(34.dp)
