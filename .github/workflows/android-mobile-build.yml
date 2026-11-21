@@ -58,5 +58,5 @@ jobs:
         with:
           files: |
             Yomic_Mobile_*.apk
-          generate_release_notes: true
+          generate_release_notes: false
 
