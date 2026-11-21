@@ -20,11 +20,10 @@
 
 <br/>
 
-### 🌐 Language / Bahasa
-
-[![English](https://img.shields.io/badge/Language-English%20(Active)-0066CC?style=for-the-badge)](./README.md#-english-documentation)
-[![Bahasa Indonesia](https://img.shields.io/badge/Bahasa-Indonesia-22C55E?style=for-the-badge)](./README.id.md)
-[![Jump to Indonesian Section](https://img.shields.io/badge/Scroll_Down-Bahasa_Indonesia_%E2%86%93-1E293B?style=for-the-badge)](#-dokumentasi-bahasa-indonesia)
+<p align="center">
+  <b>Yomic Mobile</b> is a modern, lightweight, open-source native Android application for reading manga, manhwa, manhua, and webtoons.<br/>
+  Powered by <b>Kotlin, Jetpack Compose, Material 3, QuickJS &amp; Jsoup</b> with zero ads, offline <code>.cbz</code> downloads, and 102+ modular JS extensions.
+</p>
 
 <br/>
 
@@ -59,10 +58,6 @@
 
 ---
 
-<a id="-english-documentation"></a>
-
-# 🇬🇧 English Documentation
-
 ## 📖 Table of Contents
 
 - [Overview](#-overview)
@@ -73,13 +68,12 @@
 - [Project Structure](#-project-structure)
 - [Disclaimer](#️-disclaimer)
 - [License](#-license)
-- [🇮🇩 Dokumentasi Bahasa Indonesia](#-dokumentasi-bahasa-indonesia)
 
 ---
 
 ## 🔍 Overview
 
-**Yomic Mobile** (`id.yomic.mobile`) is a modern, lightweight, open-source native Android client for reading manga, manhwa, manhua, and webtoons. Engineered with **Kotlin**, **Jetpack Compose**, and **Material 3**, it brings the full feature set and visual identity of [Yomic v2 Desktop](https://github.com/ArisaAkiyama/yomic) to Android devices with an ergonomic **5-tab navigation flow**, a native **QuickJS + Jsoup** extension runtime compatible with 102+ Yomic JavaScript extensions, offline `.cbz` archiving, and cross-platform `.yomicbackup` interoperability.
+**Yomic Mobile** (`id.yomic.mobile`) brings the full comic discovery, library management, offline reading, and tracking capabilities of [Yomic v2 Desktop](https://github.com/ArisaAkiyama/yomic) to Android devices. Built from the ground up with **Kotlin**, **Jetpack Compose**, and **Material 3**, it features an ergonomic **5-tab navigation flow**, a native **QuickJS + Jsoup** extension runtime compatible with 102+ Yomic JavaScript extensions, offline `.cbz` archiving, and cross-platform `.yomicbackup` interoperability.
 
 ---
 
@@ -95,7 +89,7 @@
      - **Sources**: Installed source catalog (`Komiku`, `Kiryuu`, `MangaDex`, `Softkomik`, `WestManga`, `VoraToon`, etc.), language filters (`ID` / `EN`), server health badges, and MangaDex in-app language switcher.
      - **Extensions**: Remote extension manager connected to [ArisaAkiyama/extension-yomic](https://github.com/ArisaAkiyama/extension-yomic) with one-tap install, update, and removal.
   5. **More**: Quick toggles for **Dark Mode** and **Incognito / Offline Mode**, plus access to **Download Queue**, **Reading Insights**, **Category Manager**, **Announcements**, **Feedback**, **Onboarding Guide**, and **Settings**.
-- **Bilingual Interface (`ID` / `EN`)**: Instant runtime language switching between Indonesian and English.
+- **Bilingual In-App UI (`ID` / `EN`)**: Instant runtime language switching between English and Indonesian inside the app.
 
 ### 📖 Immersive Fullscreen Reader & Image Pipeline
 - **3 Reading Modes**: Continuous vertical **Webtoon** (with adjustable page spacing), **Single Page**, and **Dual Page** modes with `LTR` / `RTL` reading direction.
@@ -233,154 +227,5 @@ Yomic Mobile does not host, own, or distribute any comic content. All manga, man
 ## 📄 License
 
 Distributed under the **MIT License**. See [LICENSE](./LICENSE) for more information.
-
----
----
-
-<a id="-dokumentasi-bahasa-indonesia"></a>
-
-# 🇮🇩 Dokumentasi Bahasa Indonesia
-
-<div align="center">
-
-[![Baca dalam Bahasa Indonesia (Halaman Terpisah)](https://img.shields.io/badge/Buka_Halaman-README.id.md-22C55E?style=for-the-badge)](./README.id.md)
-[![Back to English](https://img.shields.io/badge/Back_to_Top-English_%E2%86%91-0066CC?style=for-the-badge)](#-english-documentation)
-
-</div>
-
-## 📖 Daftar Isi
-
-- [Ringkasan](#-ringkasan)
-- [Fitur Utama](#-fitur-utama)
-- [Arsitektur](#️-arsitektur-aplikasi)
-- [Cara Instalasi](#-cara-instalasi)
-- [Build dari Source Code](#️-build-dari-source-code)
-- [Penafian (Disclaimer)](#️-penafian-disclaimer)
-- [Lisensi](#-lisensi)
-
----
-
-## 🔍 Ringkasan
-
-**Yomic Mobile** (`id.yomic.mobile`) adalah aplikasi pembaca manga, manhwa, manhua, dan webtoon **Android Native** yang modern, ringan, dan *open-source*. Dibangun menggunakan **Kotlin**, **Jetpack Compose**, dan **Material 3**, aplikasi ini menghadirkan seluruh fitur unggulan serta identitas visual [Yomic v2 Desktop](https://github.com/ArisaAkiyama/yomic) ke perangkat Android dengan navigasi **5-Tab ala Mihon/Tachiyomi**, mesin ekstensi **QuickJS + Jsoup** yang kompatibel dengan 102+ ekstensi JavaScript Yomic, unduhan offline format `.cbz`, serta kompatibilitas penuh file cadangan `.yomicbackup` lintas platform (PC & Android).
-
----
-
-## ✨ Fitur Utama
-
-### 🎨 Antarmuka Material 3 Adaptif & Tema Khas Yomic
-- **Identitas Visual Yomic**: Tema **Oceanic Light**, **Antigravity Carbon Dark**, dan **Deep-Ocean Reader Dark (`#0A0A0A`)** beserta opsi **AMOLED Pure Black**.
-- **Navigasi Bawah 5-Tab Ergonomis**:
-  1. **Pustaka (Library)**: Tab kategori horizontal, tampilan Grid 3-kolom / List, pencarian instan, *BottomSheet* 4-tab (`Kategori | Saring | Sumber | Urutkan`), aksi massal (*batch selection*), dan *pull-to-refresh*.
-  2. **Pembaruan (Updates)**: Umpan bab terbaru yang dikelompokkan berdasarkan `Hari Ini`, `Kemarin`, dan `Sebelumnya` dengan tombol unduh & baca cepat.
-  3. **Riwayat (History)**: Linimasa bacaan kronologis beserta pencarian dan tombol lanjutkan membaca.
-  4. **Jelajahi (Hub 2-Tab)**:
-     - **Sumber**: Katalog sumber terpasang (`Komiku`, `Kiryuu`, `MangaDex`, `Softkomik`, `WestManga`, `VoraToon`, dll.), filter bahasa (`ID` / `EN`), indikator kesehatan server, dan sakelar bahasa `ID / EN` khusus MangaDex.
-     - **Ekstensi**: Manajer ekstensi daring yang terhubung ke repositori [ArisaAkiyama/extension-yomic](https://github.com/ArisaAkiyama/extension-yomic) untuk memasang, memperbarui, dan menghapus ekstensi dalam satu ketukan.
-  5. **Lainnya (More)**: Sakelar cepat **Mode Gelap** & **Mode Penyamaran / Offline**, akses ke **Antrean Unduhan**, **Statistik Membaca**, **Kelola Kategori**, **Pengumuman**, **Kirim Masukan**, **Panduan Pemula**, dan **Pengaturan**.
-- **Dukungan Dua Bahasa (`ID` / `EN`)**: Ganti bahasa antarmuka Indonesia dan Inggris secara instan tanpa perlu memulai ulang aplikasi.
-
-### 📖 Pembaca Layar Penuh & Pemrosesan Gambar Canggih
-- **3 Mode Baca**: **Webtoon** (gulir vertikal mulus dengan pengaturan jarak halaman), **Halaman Tunggal**, dan **Dua Halaman** dengan arah baca `LTR` / `RTL`.
-- **Kontrol Interaktif**: Navigasi Ketuk 3-Zona (Kiri / Tengah / Kanan), *Double-Tap & Pinch-to-Zoom*, *Auto-Scroll*, navigasi halaman dengan tombol volume fisik, dan penahan layar tetap menyala.
-- **Pipeline Gambar Coil 3 Khusus**:
-  - **Dekripsi Gambar Otomatis (`AesImageDecryptor`)**: Mendekripsi stream gambar terproteksi AES-CBC dan XOR secara langsung di memori.
-  - **Injeksi Header Per-Gambar (`PipeHeaderOkHttpInterceptor`)**: Mendukung sintaks pipe `url|Referer=...|User-Agent=...` khas ekstensi Yomic.
-  - **Pemrosesan Gambar Cerdas (`YomicImageProcessor`)**: Pemotongan pinggiran putih/hitam otomatis (*auto-crop borders*), *smart downscaling*, dan penajaman gambar (*unsharp mask*).
-  - **Pembaca Arsip `.cbz` Langsung (`CbzPageFetcher`)**: Membaca halaman langsung dari file `.cbz` tanpa mengekstrak file sementara ke penyimpanan.
-
-### 🌐 Mesin Ekstensi QuickJS & Ketahanan Jaringan
-- **Kompatibel 100% dengan Ekstensi Yomic Desktop**: Menjalankan skrip `.js` secara native menggunakan **QuickJS (`quickjs-kt`)** yang dipadukan dengan **`JsoupDomBridge`** serta fallback **`WebViewPageExtractor`** untuk situs berbasis SPA / Next.js.
-- **DNS-over-HTTPS (DoH)**: Mendukung **Cloudflare (`1.1.1.1`)**, **Google (`8.8.8.8`)**, dan **AdGuard** untuk menembus pemblokiran DNS ISP.
-- **Penyelesai Tantangan Cloudflare**: Dilengkapi `CloudflareSolverActivity` interaktif yang tersinkronisasi dengan `WebViewCookieJar`.
-
-### 📚 Unduhan Offline, Statistik, Pelacak & Cadangan Lintas Platform
-- **Background Worker Handal (WorkManager)**: `ChapterDownloadWorker` untuk unduhan multi-bab di latar belakang (format folder maupun arsip `.cbz`, unduh otomatis bab berikutnya, hapus otomatis setelah dibaca) dan `LibraryUpdateWorker` terjadwal.
-- **Dasbor Statistik Membaca**: Melacak total bab terbaca, estimasi jam baca, grafik aktivitas 14 hari terakhir, komposisi genre favorit, dan *Daily Streak*.
-- **Sinkronisasi MyAnimeList (MAL) OAuth2 PKCE**: Tautkan komik ke akun MAL dan sinkronkan progres bab secara otomatis.
-- **Kunci Biometrik Aplikasi**: Lindungi akses aplikasi dengan sidik jari atau pemindai wajah (`androidx.biometric`).
-- **Cadangan `.yomicbackup` Lintas Platform**: Ekspor dan pulihkan data pustaka secara mulus antara **Yomic v2 Desktop (PC)** dan **Yomic Mobile (Android)**.
-
----
-
-## 🏗️ Arsitektur Aplikasi
-
-```text
-┌──────────────────────────────────────────────────────────────────────┐
-│                 Lapisan UI Jetpack Compose (Material 3)              │
-│   5-Tab NavHost • Pustaka • Jelajahi • Detail • Pembaca • Statistik  │
-└───────────────────────────────┬──────────────────────────────────────┘
-                                │  StateFlow / Unidirectional Data Flow
-┌───────────────────────────────▼──────────────────────────────────────┐
-│            ViewModel & Pengendali Fitur (YomicViewModel)             │
-│   LibraryController • ReaderController • BrowseController • Sync     │
-└──────────────┬────────────────────────────────┬──────────────────────┘
-               │                                │
-┌──────────────▼─────────────────┐ ┌────────────▼──────────────────────┐
-│   Lapisan Data & Penyimpanan   │ │   Mesin Ekstensi & Jaringan       │
-│ • Room SQLite DB (DAO/Skema)   │ │ • QuickJsExtensionEngine          │
-│ • DataStore Preferences        │ │ • JsoupDomBridge & WebView        │
-│ • WorkManager (Unduh/Sinkron)  │ │ • OkHttp + DoH + CookieJar        │
-│ • .yomicbackup & MAL PKCE      │ │ • Coil 3 + AES/CBZ/ImageProcessor │
-└────────────────────────────────┘ └───────────────────────────────────┘
-```
-
----
-
-## 📦 Cara Instalasi
-
-1. Buka halaman [**GitHub Actions — Yomic Mobile Android APK**](https://github.com/ArisaAkiyama/yomic-android/actions/workflows/android-mobile-build.yml) (atau halaman [**Releases**](https://github.com/ArisaAkiyama/yomic-android/releases)).
-2. Pilih hasil build terbaru, lalu unduh salah satu artifact berikut:
-   - **`Yomic-Mobile-release-apk`** *(Direkomendasikan — telah dioptimasi dengan R8, ukuran sangat ringan)*
-   - **`Yomic-Mobile-debug-apk`** *(Untuk pengujian/debugging, dapat dipasang berdampingan sebagai `id.yomic.mobile.debug`)*
-3. Ekstrak file `.zip` hasil unduhan dan pasang file `.apk` di perangkat Android Anda (minimal Android 7.0 / API 24).
-
----
-
-## 🛠️ Build dari Source Code
-
-Anda dapat meng-compile **Yomic Mobile** menggunakan **Toolchain CLI ringan (~500 MB tanpa Android Studio)** maupun menggunakan **Android Studio**.
-
-### Opsi 1 — Build CLI Ringan Tanpa Android Studio
-
-```powershell
-# 1. Clone repository
-git clone https://github.com/ArisaAkiyama/yomic-android.git
-cd yomic-android
-
-# 2. Jalankan setup toolchain sekali saja (Menginstal OpenJDK 17 + Android CLI + SDK API 35 + opsional scrcpy)
-.\scripts\setup-android-cli.ps1 -WithScrcpy
-
-# 3. Build, pasang otomatis ke HP Android via USB/Wireless ADB, dan tampilkan layar HP di PC
-.\scripts\build-and-run.ps1 -Scrcpy
-
-# Atau build Release APK super ringan (R8 Minified) tanpa install langsung
-.\scripts\build-and-run.ps1 -Release -NoInstall
-```
-
-### Opsi 2 — Perintah Gradle Standar
-
-```bash
-# Menjalankan seluruh unit test (QuickJS JVM bridge, Room DAO, Dekripsi Gambar, Repository)
-./gradlew :app:testGithubDebugUnitTest
-
-# Build APK Debug & Release (varian GitHub dengan katalog ekstensi bawaan)
-./gradlew :app:assembleGithubDebug :app:assembleGithubRelease
-
-# Build APK varian Neutral (tanpa URL repositori ekstensi pihak ketiga bawaan)
-./gradlew :app:assembleNeutralRelease
-```
-
----
-
-## ⚠️ Penafian (Disclaimer)
-
-Yomic Mobile tidak menyimpan, memiliki, atau mendistribusikan konten komik apa pun. Seluruh metadata dan gambar manga, manhwa, manhua, serta webtoon diambil secara langsung dari situs pihak ketiga melalui ekstensi yang dipasang oleh pengguna. Mohon dukung kreator dan penerbit resmi kapan pun memungkinkan.
-
----
-
-## 📄 Lisensi
-
-Didistribusikan di bawah **Lisensi MIT**. Lihat file [LICENSE](./LICENSE) untuk informasi selengkapnya.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00AAFF,100:0052CC&height=120&section=footer" width="100%"/>
